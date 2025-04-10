@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #555;
+    }
+    nav button {
+      background: none;
+      color: white;
+      padding: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background-color: #777;
+    }
+    .section {
+      display: none;
+      padding: 2rem;
+    }
+    .active {
+      display: block;
+    }
+    .card {
+      background: white;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tanoj's Portfolio</h1>
+    <p>Java Backend Developer</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <section id="about" class="section active">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Hello! I'm Tanoj, a Java Backend Developer with over 2.5 years of experience in building robust web applications using Spring Boot, Hibernate, and MySQL.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>Java (Core)</li>
+        <li>Spring Boot, Spring MVC</li>
+        <li>Hibernate / JPA</li>
+        <li>RESTful APIs</li>
+        <li>MySQL, SQL</li>
+        <li>Docker, Jenkins</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="card">
+      <h2>Projects</h2>
+      <p><strong>InfoCom SessionBoard Integration</strong>: Integrated SessionBoard API with Salesforce to streamline trade show session data.</p>
+      <p><strong>Online Book Store</strong>: Developed backend features for catalog management, user accounts, and order tracking.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: tanoj@example.com</p>
+      <p>GitHub: <a href="https://github.com/tanoj" target="_blank">github.com/tanoj</a></p>
+    </div>
+  </section>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
